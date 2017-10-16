@@ -1,39 +1,35 @@
-# Nmax
+# Funbox - Nmax
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nmax`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Зависимости
 
-TODO: Delete this and the text above, and describe your gem
+* Ruby 2.4.1 и bundler
 
-## Installation
+## Установка
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'nmax'
+Выполнить следующие команды в терминале:
+```
+git clone git@github.com:QNester/funbox-nmax.git
+cd funbox-nmax
+gem build nmax.gemspec
+gem install nmax-0.1.0.gem
 ```
 
-And then execute:
+## Выполнение
+Чтобы выполнить скрипт надо выполнить команду:
+```
+cat <YOUR_TXT_FILE> | ./nmax <N>
+```
+Где `N` - число необходимых чисел в выводе. 
+Если вы не укажите это число, то оно поставится по умолчанию на `1000`
 
-    $ bundle
+## Тесты
+Для запуска тестов гема необходимо запустить:
+```
+bundle exec rspec
+ruby test_script.rb
+``` 
 
-Or install it yourself as:
+## Дополнительно
+Для решения задания был создан топик на SO: 
 
-    $ gem install nmax
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/nmax. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Code of Conduct
-
-Everyone interacting in the Nmax project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/nmax/blob/master/CODE_OF_CONDUCT.md).
+https://stackoverflow.com/questions/46749170/parse-large-stdin-ruby
