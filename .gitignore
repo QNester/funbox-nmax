@@ -17,4 +17,5 @@
 *.txt
 *.log
 !spec/test.txt
-spec/tmp/tmp_stdout
+tmp/*
+!tmp/.keep
