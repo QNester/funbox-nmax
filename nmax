@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'nmax'
+include Nmax
+
+DEFAULT_N = 1000
+n = DEFAULT_N
+
+until ARGV.empty? do
+  n = ARGV.shift
+  puts "N is #{n}"
+  n = n.to_i
+  if n == 0
+    puts 'You should pass as argument decimal more then 0. Now default value: ' + DEFAULT_N.to_s
+  end
+end
+
+nmax = find_decimals_in_stdin(STDIN, n)
+
+puts "Nmax: #{nmax.join(', ')}"
