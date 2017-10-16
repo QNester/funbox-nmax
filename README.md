@@ -12,6 +12,7 @@ git clone git@github.com:QNester/funbox-nmax.git
 cd funbox-nmax
 gem build nmax.gemspec
 gem install nmax-0.1.0.gem
+bundle install
 ```
 
 ## Выполнение
